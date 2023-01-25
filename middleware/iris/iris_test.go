@@ -70,7 +70,7 @@ func TestMiddleware(t *testing.T) {
 					Code:    "202",
 				}
 				m.On("ObserveHTTPRequestDuration", mock.Anything, expHTTPReqProps, mock.Anything).Once()
-				m.On("ObserveHTTPResponseSize", mock.Anything, expHTTPReqProps, int64(14)).Once()
+				m.On("ObserveHTTPResponseSize", mock.Anything, expHTTPReqProps, int64(15)).Once()
 
 				expHTTPProps := metrics.HTTPProperties{
 					ID:      "/test",
@@ -86,7 +86,7 @@ func TestMiddleware(t *testing.T) {
 				}
 			},
 			expRespCode: 202,
-			expRespBody: `{"test":"one"}`,
+			expRespBody: "{\"test\":\"one\"}\n",
 		},
 	}
 
