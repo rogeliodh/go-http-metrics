@@ -97,4 +97,4 @@ require (
 
 go 1.17
 
-replace github.com/slok/go-http-metrics => github.com/rogeliodh/go-http-metrics v0.0.0-20230125212355-aa9e58542ed1
+replace github.com/slok/go-http-metrics => github.com/rogeliodh/go-http-metrics v0.10.1-allot
